@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+<style>
+    .header{
+        background-image: url(img/fon.jpg);
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+       
+        
+    }
+    
+    .hh{
+        color: forestgreen;
+        width: 100%;
+        border-radius: 5px;
+        height: 50px;
+        background:rgb(159, 190, 19);
+        
+        
+
+    }
+    .link{
+        
+        color:white;
+        padding-bottom: 0px;
+        margin-top: 160px;
+        flex: 0.2;
+        font-style: inherit;
+        transition-property: all;
+        transition-timing-function:linear;
+        transition-duration: 0.2s;
+        font-size:500;
+        width: 0;
+        height: 0;
+        text-align: start;
+        
+        
+    }
+    .link:hover{
+        color: blue;
+    }
+    A{
+text-decoration: none;
+}
+    .search{/*Тут должен быть поисковик по сайту.*/
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            margin-top: 150px;
+            position:absolute;
+            background:whitesmoke;
+            transition-property: all;
+            transition-timing-function:linear;
+            transition-duration: 0.2s; 
+            color: rgba(2, 2, 2, 0.726);   
+            border-radius: 5px;
+            flex: 1;
+            /*background-image: url(img/search.jpg) ;*/
+            text-align: center;
+        }  
+        .search:hover{
+                border-radius: 30px;
+                background: white;
+                border:2px solid blue ;} 
+        .logo{
+            background-image: url(img/dino.jpg); 
+           margin: 10px;
+           margin-top: 5px; 
+           border: 0px;   
+           padding: 0px;
+           /*background:red;*/
+           width: 95px;
+           height: 95px;
+           border-radius: 5px;
+           flex: 1; 
+           padding-bottom: 30px;
+           padding-right: 0px;
+           max-width: 500px;
+        }    
+       .side{
+           background: greenyellow;
+           margin: auto;
+           padding: 0px;
+           flex: 1;
+           width: 100px;
+           height: 100px;
+           border-radius: 5px;
+           
+           
+       }
+     .items{
+         display: flex;
+         flex-wrap: wrap;
+
+     }
+     .empty{
+         flex: 0.8;
+         width: 100px;
+         height: 100px; 
+     }
+        
+                 
+</style>
+</head>
+<body>
+    <div class="hh"><h1 align="center"><big>Каталог динозавров</big></h1></div>
+   <header class="header"> 
+   <div class="items"><div class="logo"></div>
+   <div class="search">Поиск в каталоге...</div>
+       <div class="empty"></div>
+      <a href="#" style="color: white;"> <li class="link"><big><big>Главная</a>
+        <a href="#"style="color: white;"><li class="link">  Каталог</a>
+            <a href="#"style="color: white;">  <li class="link">О нас</big></big></li></a>
+        </div>
+        
+        </div>
+   </div>
+   </header>
+</body>
+</html>
