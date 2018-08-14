@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Catalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    .header{
+        padding: 10px;
+        position: fixed;
+        background: greenyellow;
+        width:60%;
+        height:30px;
+        top:500px;
+        left:0px ;
+        right:0px;
+        text-align: left;
+        border-radius: 5px;
+        flex: 1;
+
+        }
+        .search{
+            padding: 10px;
+            position:fixed;
+            right: 300px;
+            
+            transition-property: all;
+            transition-timing-function:linear;
+            transition-duration: 0.2s; 
+            color: rgba(2, 2, 2, 0.726);   
+            flex: 1;
+           /* background-image: url(img/search.jpg) ;*/
+            background:whitesmoke;
+          }
+            .search:hover{
+                border-radius: 30px;
+                background: white;
+                border:2px solid  whitesmoke ;
+                
+            }
+            
+        
+        
+            
+        
+        .nav-menue-container:hover{
+            color: blue;
+           }
+    
+        .hh{
+            color: orange;}
+  .nav-menue-link {
+      color: antiquewhite;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+#title{
+    display: flex;
+    flex-direction: row;
+    height: 390px;
+    justify-content: flex-start;
+    border-radius: 5px;
+    
+}
+  #titleimg{
+      flex: 0.977;
+      background-image: url(img/title.jpg);
+      border-radius: 5px;
+      ;
+
+  }
+      
+
+  
+#titletxt{
+    padding: 10px;  
+    height: 350px;
+    flex:2;
+    border-radius: 5px; 
+    
+    }
+        
+        
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    top: 500px;
+}                             
+</style>
+</head>
+<div class="hh"><h1 align="center"><big><big>Dinosaur Catalog</big></big></h1></div>
+<div id="title">
+        
+      <div id="titleimg"> </div> 
+      
+      <div id="titletxt"><p >This is a dinosaur catalog,where you can find a lot of information about Terrible lizards!</p></div> 
+</div>
+
+<div id="nav">
+<header class="header"><big><a href="#">Home</a>
+     <a href="#">About</a> 
+          <a href="#">Contacts</big></a></div> 
+          <div class="search"></div>
+</div>
+</header>
+<body>
+    
+</body>
+</html>
