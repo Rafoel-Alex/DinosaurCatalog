@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,145 +7,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <style>
-        .header {
-            background-image: url(img/fon.jpg);
-            width: 100%;
-            height: 200px;
-            border-radius: 5px;
-        }
+<style>
+    .header{
+        background-image: url(img/fon.jpg);
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        position: static;
+       
         
-        .hh {
-            color: forestgreen;
-            width: 100%;
-            border-radius: 5px;
-            height: 50px;
-            background: rgb(159, 190, 19);
-        }
+    }
+    .footer{
+        background:darkorange;
+        width: 100%;
+        height: 150px;
+        margin-top: 200px;
+        border-radius: 5px;
+    }
+    
+    .hh{
+        color: forestgreen;
+        width: 100%;
+        border-radius: 5px;
+        height: 50px;
+        background:rgb(159, 190, 19);
         
-        .link {
-            color: white;
-            padding-bottom: 0px;
-            margin-top: 160px;
-            flex: 0.2;
-            font-style: inherit;
-            transition-property: all;
-            transition-timing-function: linear;
-            transition-duration: 0.2s;
-            font-size: 500;
-            width: 0;
-            height: 0;
-            text-align: start;
-        }
         
-        .link:hover {
-            color: blue;
-        }
+
+    }
+    .link{
         
-        A {
-            text-decoration: none;
-        }
+        color:white;
+        margin-top: 155px;
+        flex: 0.2;
+        font-style: inherit;
+        transition-property: all;
+        transition-timing-function:linear;
+        transition-duration: 0.2s;
+        font-size:500;
+        width: 0;
+        height: 0;
+        text-align: start;
+        font-size: 20px;
+        margin-left: 10px;
+        max-width: 150px;
         
-        .search {
-            /*Тут должен быть поисковик по сайту.*/
+    }
+    .social-img{
+        flex: 1;
+        margin: 10px;
+        max-width: 40px;
+
+    }
+    .social-txt{
+        text-align: left;
+        color:white;
+        transition-property: all;
+        transition-timing-function:linear;
+        transition-duration: 0.5s; 
+        flex: 1;
+        margin-top: 15px;
+        font-size: 20px;
+        width: 300px;
+        height: 75px;
+        font-style: inherit;
+        
+    }
+    .social-txt:hover{
+        text-decoration: underline ;
+        
+    }
+    .link:hover{
+        color:darkorange;
+    }
+    A{
+text-decoration: none;
+}
+    .search{/*Тут должен быть поисковик по сайту.*/
             padding: 10px;
-            margin: 10px;
+            margin-left: 5px;
+            margin-top: 5px;
             width: 250px;
             margin-top: 150px;
-            position: absolute;
-            background: whitesmoke;
+            position:absolute;
+            background:whitesmoke;
             transition-property: all;
-            transition-timing-function: linear;
-            transition-duration: 0.2s;
-            color: rgba(2, 2, 2, 0.726);
+            transition-timing-function:linear;
+            transition-duration: 0.2s; 
+            color: rgba(2, 2, 2, 0.726);   
             border-radius: 5px;
             flex: 1;
             /*background-image: url(img/search.jpg) ;*/
             text-align: center;
-        }
+        }  
+        .search:hover{
+                border-radius: 30px;
+                background: white;
+                border:2px solid darkorange ;} 
+        .logo{
+            background-image: url(img/dino.jpg); 
+           margin-left: 5px;
+           margin-top: 5px; 
+           border: 0px;   
+           padding: 0px;
+           /*background:red;*/
+           width: 500px;
+           height: 100px;
+           border-radius: 5px;
+           flex: 1; 
+           padding-bottom: 30px;
+           padding-right: 0px;
+           max-width: 500px;
+           max-height: 100px;
+        }    
+       .side{
+           background: greenyellow;
+           margin: auto;
+           padding: 0px;
+           flex: 1;
+           width: 100px;
+           height: 100px;
+           border-radius: 5px;
+           
+           
+       }
+     .items{
+         display: flex;
+         flex-direction: row;
+     
+     }
+     .f-items{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+     }
+     .header-txt{/*Бывший .empty я решил вставить сюда текст*/
+         width: 350px;
+         height: 70px; 
+         flex: 0.8;
+         border: 2px solid white;
+         border-radius: 5px;
+         margin-top: 5px;
+         color: white;
+         padding-left: 10px;
+         padding-right: 10px;
+         margin-left: 25px;
+         max-width: 350px;
+         font-style: inherit;
+         margin-top: 5px;
         
-        .search:hover {
-            border-radius: 30px;
-            background: white;
-            border: 2px solid blue;
-        }
+     }
+     .empty{
+         width: 100px;
+         height: 100px; 
+         flex: 10;
+     }
+     .half-empty{
+        width: 100px;
+         height: 100px;
+         flex: 1; 
+     }
+
+     
         
-        .logo {
-            background-image: url(img/dino.jpg);
-            margin: 10px;
-            margin-top: 5px;
-            border: 0px;
-            padding: 0px;
-            /*background:red;*/
-            /*min-width & max-width должны совпадать с размерами логотипа,
-            чтобы при изменении размера окна лого не скрывалось
-            или сделать лого адаптивным с помощью background-size:cover*/
-            width: 95px;
-            height: 95px;
-            border-radius: 5px;
-            /* нельзя одновременно задавать flex и width/height, они конфликтуют между собой*/
-            flex: 1;
-            padding-bottom: 30px;
-            padding-right: 0px;
-            max-width: 500px;
-        }
-        
-        .side {
-            background: greenyellow;
-            margin: auto;
-            padding: 0px;
-            flex: 1;
-            width: 100px;
-            height: 100px;
-            border-radius: 5px;
-        }
-        
-        .items {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .empty {
-            flex: 0.8;
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+                 
+</style>
 </head>
-
 <body>
-    <div class="hh">
-        <h1 align="center"><big>Каталог динозавров</big></h1>
-    </div>
-    <header class="header">
-
-        <!--с флексбоксами в хедере намудрил :D
-        вынеси логотип из items и он займет всю ширину блока header
-        и не нужно будет делать flex-wrap.
-        search и ссылки можно будет разместить в строку и расположить с помощью
-        justify-content (все ссылки можно заключить в отдельный див)
-    и empty можно будет заменить margin у search'а-->
-        <div class="items">
-            <div class="logo"></div>
-            <!--для поля ввода используем тэг input, посмотри значения атрибута type для этого тэга,
-            а так же placeholder-->
-            <div class="search">Поиск в каталоге...</div>
-            <div class="empty"></div>
-            <a href="#" style="color: white;">
-                <li class="link"><big><big>Главная</a>
+    <div class="hh"><h1 align="center"><big>Каталог динозавров</big></h1></div>
+   <header class="header"> 
+   <div class="items"><div class="logo"></div>
+   <div class="search">Поиск в каталоге...</div>
+       <div class="header-txt"><p align="left">Этот сайт-простой и легкий способ найти информацию об "Ужасных ящерах"! </p> </div>
+       <div class="half-empty"></div>
+      <a href="#" style="color: white;"> <li class="link">Главная</a>
         <a href="#"style="color: white;"><li class="link">  Каталог</a>
-            <!-- не совсем понял что ты хотел сделать с <big>, вместо этого тэга лучше размер шрифта задавать в CSS. увеличить размер шрифта относительно можно с помощью единиц em и rem-->
-            <a href="#"style="color: white;">  <li class="link">О нас</big></big>
-                </li>
-            </a>
+            <a href="#"style="color: white;">  <li class="link">О нас</li></a>
         </div>
+        
+    </div>
+</div>
+        </header>
+            <footer class="footer">
+                <div class="f-items">
+                    <div class="empty"></div>
+                <div class="social-img"><img src="img/vk.png"width="35px" height="35px" ></div><div class="social-txt">Вконтаке</div>
+                </div>
 
-        </div>
-        </div>
-    </header>
-    <!--header выглядит хорошо, теперь давай сделаем основную часть.
-    как вариант, на главной странице лента статей с текстом "под катом"
-    и кнопка "читать далее" и сбоку список из, например, 10 последних статей-->
+
+            
+            <div class="f-items">
+                <div class="empty"></div>
+                    <div class="social-img"><img src="img/youtube.png"width="38px" height="38px" ></div><div class="social-txt">YouTube</div>
+                </div>
+            </footer>
+       
+   
 </body>
-
 </html>
