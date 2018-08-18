@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DinosaurCatalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        .header {
+            background-image: url(img/fon.jpg);
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+            position: static;
+            min-width: 370;
+        }
+
+        .main {
+            width: 100%;
+            height: 1000px;
+            margin-top: 10px;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-gap: 10px;
+        }
+
+
+
+        .footer {
+            background: darkorange;
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .hh {
+            color: forestgreen;
+            width: 100%;
+            border-radius: 5px;
+            height: 50px;
+            background: rgb(159, 190, 19);
+        }
+
+        .link {
+
+            color: white;
+            margin-top: 155px;
+            flex: 0.2;
+            font-style: inherit;
+            transition-property: all;
+            transition-timing-function: linear;
+            transition-duration: 0.2s;
+            font-size: 500;
+            width: 0;
+            height: 0;
+            text-align: start;
+            font-size: 20px;
+            margin-left: 10px;
+            max-width: 150px;
+            flex-wrap: wrap;
+
+        }
+
+        .social-img {
+            flex: 1;
+            margin: 10px;
+            max-width: 40px;
+        }
+
+        .social-txt {
+            text-align: left;
+            color: white;
+            transition-property: all;
+            transition-timing-function: linear;
+            transition-duration: 0.5s;
+            flex: 1;
+            margin-top: 15px;
+            font-size: 20px;
+            max-width: 300px;
+            max-height: 75px;
+            font-style: inherit;
+        }
+
+        .social-txt:hover {
+            text-decoration: underline;
+        }
+
+        .link:hover {
+            color: darkorange;
+        }
+
+        A {
+            text-decoration: none;
+        }
+
+        .search {
+            /*Тут должен быть поисковик по сайту.*/
+            padding: 10px;
+            margin-left: 5px;
+            margin-top: 5px;
+            width: 250px;
+            margin-top: 150px;
+            position: absolute;
+            background: whitesmoke;
+            transition-property: all;
+            transition-timing-function: linear;
+            transition-duration: 0.2s;
+            color: rgba(2, 2, 2, 0.726);
+            border-radius: 5px;
+            flex: 1;
+            /*background-image: url(img/search.jpg) ;*/
+            text-align: center;
+        }
+
+        .search:hover {
+            border-radius: 30px;
+            background: white;
+            border: 2px solid darkorange;
+        }
+
+        .logo {
+            background-image: url(img/dino.jpg);
+            margin-left: 5px;
+            margin-top: 5px;
+            border: 0px;
+            padding: 0px;
+            width: 500px;
+            height: 100px;
+            border-radius: 5px;
+            flex: 1;
+            padding-bottom: 30px;
+            padding-right: 0px;
+            max-width: 500px;
+            max-height: 100px;
+            min-width: 500px;
+
+        }
+
+        .side {
+            background: greenyellow;
+            margin: auto;
+            padding: 0px;
+            flex: 1;
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+        }
+
+        .items {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .f-items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .header-txt {
+            /*Бывший .empty я решил вставить сюда текст*/
+            width: 350px;
+            height: 70px;
+            flex: 0.8;
+            border: 2px solid white;
+            border-radius: 5px;
+            margin-top: 5px;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 25px;
+            max-width: 350px;
+            font-style: inherit;
+            margin-top: 5px;
+            min-width: 200px;
+        }
+
+        .empty {
+            width: 100px;
+            height: 100px;
+            flex: 10;
+        }
+
+        .half-empty {
+            width: 100px;
+            height: 100px;
+            flex: 1;
+        }
+
+        #content {
+            background: whitesmoke;
+            height: 1000px;
+            border-radius: 5px;
+        }
+
+        #catalog {
+            height: 300px;
+            background: rgb(1, 255, 1);
+            border-radius: 5px;
+            padding: 0 10px 0 10px;
+        }
+
+        .c-item {
+            flex: 1;
+            text-decoration: underline;
+            color: white;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            transition-property: all;
+            transition-timing-function: linear;
+            transition-duration: 0.2s;
+
+        }
+
+        .c-item:hover {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        #log-in {
+            outline: 2px solid grey;
+            background: whitesmoke;
+            border-radius: 5px;
+            width: 100%;
+            height: 160px;
+
+            color: gray;
+            text-align: left;
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .bottom {
+            margin-bottom: 5px;
+
+        }
+
+        .place {
+            margin-top: 5px;
+            margin-left: AUTO;
+            margin-right: auto;
+        }
+
+        .ss {
+            color: white;
+            font-size: 20px;
+                    }
+    </style>
+</head>
+
+<body>
+    <div class="hh">
+        <h1 align="center">
+            <big>Каталог динозавров</big>
+        </h1>
+    </div>
+    <header class="header">
+        <div class="items">
+            <div class="logo"></div>
+            <div class="search">
+                <input type="search" placeholder="Поиск по каталогу">
+                <input type="submit" value="Поиск">
+            </div>
+            <div class="header-txt">
+                <p align="left">Этот сайт-простой и легкий способ найти информацию об "Ужасных ящерах"! </p>
+            </div>
+            <div class="half-empty"></div>
+            <a href="#" style="color: white;">
+                <li class="link">Главная</a>
+            <a href="#" style="color: white;">
+                <li class="link"> Каталог</a>
+            <a href="#" style="color: white;">
+                <li class="link">О нас</li>
+            </a>
+        </div>
+        </div>
+        </div>
+    </header>
+    <main class="main">
+        <div id="catalog">
+            <p class="ss">Поиск динозавров :</p>
+            <div class="c-item">Травоядные</div>
+            <div class="c-item">Хищники</div>
+            <div class="c-item">Водные ящеры</div>
+            <div class="c-item">Лутающие ящеры</div>
+
+        </div>
+        <div id="content"></div>
+        <div id="log-in">
+
+            <div class="place">
+                <p>Вход</p>
+                <p class="bottom">
+                    <input type="text" placeholder="Введите логин">
+                </p>
+                <p class="bottom">
+                    <input type="password" placeholder="Введите пароль">
+                </p>
+                <input type="submit" value="Ок">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="f-items">
+            <div class="empty"></div>
+            <div class="social-img">
+                <img src="img/vk.png" width="35px" height="35px">
+            </div>
+            <div class="social-txt">Вконтаке</div>
+        </div>
+        <div class="f-items">
+            <div class="empty"></div>
+            <div class="social-img">
+                <img src="img/youtube.png" width="38px" height="38px">
+            </div>
+            <div class="social-txt">YouTube</div>
+        </div>
+    </footer>
+</body>
+
+</html>
